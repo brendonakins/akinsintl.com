@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akins Companies LLC — International Trade & Business Services</title>
+<meta name="description" content="Akins Companies LLC — International trade sourcing, business operations consulting, and AI workflow services. Kansas City, MO.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1B2A;
+    --navy-mid: #162236;
+    --navy-light: #1E3352;
+    --gold: #C9A84C;
+    --gold-light: #E2C47A;
+    --gold-pale: #F5E9C8;
+    --cream: #FAF7F0;
+    --white: #FFFFFF;
+    --text-muted: #8899AA;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(13,27,42,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+  .nav-brand span { color: var(--gold); font-style: italic; }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light) !important;
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 8px 18px;
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s !important;
+  }
+  .nav-cta:hover {
+    background: var(--gold) !important;
+    color: var(--navy) !important;
+    border-color: var(--gold) !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(30,51,82,0.8) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.0;
+    margin-bottom: 12px;
+    max-width: 820px;
+  }
+  .hero h1 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-top: 20px;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+  }
+  .hero-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 32px 0;
+    opacity: 0.6;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .hero-meta-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+  .hero-meta-value {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    opacity: 0.6;
+  }
+  .hero-scroll::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--text-muted);
+  }
+
+  /* ── SECTION INTRO ── */
+  .section-intro {
+    padding: 80px 60px 56px;
+    border-top: 1px solid rgba(201,168,76,0.12);
+    max-width: 760px;
+  }
+  .section-intro-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .section-intro p {
+    font-size: 15px;
+    color: rgba(250,247,240,0.7);
+    line-height: 1.9;
+  }
+
+  /* ── DIVISIONS (3 CARDS) ── */
+  .divisions {
+    padding: 0 60px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(201,168,76,0.1);
+    border-top: 1px solid rgba(201,168,76,0.12);
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+  }
+
+  .division-card {
+    background: var(--navy);
+    padding: 56px 44px 48px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  .division-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .division-card:hover { background: var(--navy-mid); }
+  .division-card:hover::before { transform: scaleX(1); }
+
+  .division-card-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.1);
+    line-height: 1;
+    margin-bottom: 24px;
+    transition: color 0.3s;
+  }
+  .division-card:hover .division-card-num { color: rgba(201,168,76,0.18); }
+
+  .division-card-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .division-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 2.5vw, 34px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .division-card h2 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .division-card-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.85;
+    margin-bottom: 36px;
+    flex: 1;
+  }
+  .division-card-bullets {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+  .division-card-bullets li {
+    font-size: 12px;
+    color: rgba(250,247,240,0.6);
+    padding: 5px 0;
+    padding-left: 16px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .division-card-bullets li:last-child { border-bottom: none; }
+  .division-card-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 10px;
+  }
+  .division-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    padding-bottom: 3px;
+    transition: color 0.2s, border-color 0.2s;
+    align-self: flex-start;
+  }
+  .division-card-link::after {
+    content: '→';
+    transition: transform 0.2s;
+  }
+  .division-card:hover .division-card-link {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+  .division-card:hover .division-card-link::after {
+    transform: translateX(4px);
+  }
+
+  /* ── ABOUT STRIP ── */
+  .about-strip {
+    padding: 80px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+  }
+  .about-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .about-strip h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .about-strip h3 em { color: var(--gold); font-style: italic; }
+  .about-strip p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .about-stat {
+    background: var(--navy-mid);
+    padding: 28px 24px;
+  }
+  .about-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .about-stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── CONTACT STRIP ── */
+  .contact-strip {
+    padding: 80px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .contact-strip-left h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .contact-strip-left h3 em { color: var(--gold); font-style: italic; }
+  .contact-strip-left p {
+    font-size: 13px;
+    color: var(--text-muted);
+    max-width: 420px;
+    line-height: 1.8;
+  }
+  .contact-strip-right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .contact-item-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+  .contact-item a, .contact-item span {
+    font-size: 13px;
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-item a:hover { color: var(--gold-light); }
+  .contact-btn {
+    margin-top: 8px;
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .contact-btn:hover { background: var(--gold-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid rgba(201,168,76,0.15);
+    padding: 32px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 300;
+  }
+  .footer-brand span { color: var(--gold); }
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .footer-links a {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold-light); }
+  .footer-note {
+    font-size: 11px;
+    color: rgba(136,153,170,0.5);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    .hero-scroll { left: 24px; }
+    .section-intro { padding: 60px 24px 40px; }
+    .divisions {
+      grid-template-columns: 1fr;
+      padding: 0 24px 60px;
+      background: none;
+      border: none;
+      gap: 24px;
+    }
+    .division-card {
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 4px;
+    }
+    .about-strip {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 60px 24px;
+    }
+    .contact-strip {
+      padding: 60px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-brand">Akins <span>Companies</span> LLC</a>
+  <ul class="nav-links">
+    <li><a href="#divisions">What We Do</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="services.html" class="nav-cta">View Services</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Kansas City, MO &nbsp;·&nbsp; Est. 2024</div>
+  <h1>Built to <em>Source,</em><br>Built to <em>Scale.</em></h1>
+  <p class="hero-sub">Akins Companies LLC is an international trade and business services firm helping companies source smarter, operate cleaner, and grow with confidence.</p>
+  <div class="hero-divider"></div>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Headquarters</span>
+      <span class="hero-meta-value">Kansas City, Missouri</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Markets Served</span>
+      <span class="hero-meta-value">Worldwide</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Contact</span>
+      <span class="hero-meta-value"><a href="mailto:Brendon@akinsintl.com" style="color:var(--gold-light);text-decoration:none;">Brendon@akinsintl.com</a></span>
+    </div>
+  </div>
+  <div class="hero-scroll">Explore</div>
+</section>
+
+<!-- SECTION INTRO -->
+<div class="section-intro" id="divisions">
+  <div class="section-intro-label">Three Divisions. One Partner.</div>
+  <p>Whether you're sourcing a product internationally, trying to get your business operation out of spreadsheets, or looking to put AI to work in your company — Akins Companies has a division built for it. Each operates independently, and each can be engaged on its own.</p>
+</div>
+
+<!-- DIVISION CARDS -->
+<div class="divisions">
+
+  <!-- CHARCOAL -->
+  <a href="charcoal.html" class="division-card">
+    <div class="division-card-num">01</div>
+    <div class="division-card-tag">Trade Division</div>
+    <h2>Hardwood <em>Charcoal</em></h2>
+    <p class="division-card-desc">Premium Namibian hardwood charcoal sourced directly from Southern Africa. Restaurant-grade lump and briquettes, available in container quantities for US and international distributors.</p>
+    <ul class="division-card-bullets">
+      <li>Restaurant Grade Lump 40mm+</li>
+      <li>Standard Lump 30mm+</li>
+      <li>Hardwood Briquettes</li>
+      <li>Container & pallet minimums</li>
+      <li>CIF pricing to US ports</li>
+    </ul>
+    <span class="division-card-link">View Product Info</span>
+  </a>
+
+  <!-- OPS CONSULTING -->
+  <a href="services.html#ops" class="division-card">
+    <div class="division-card-num">02</div>
+    <div class="division-card-tag">Consulting Division</div>
+    <h2>Operations <em>Consulting</em></h2>
+    <p class="division-card-desc">Hands-on operational consulting for small and mid-size businesses. Built on real experience running a multi-revenue business — not theory. We fix what's broken and build what's missing.</p>
+    <ul class="division-card-bullets">
+      <li>Operations audit & gap analysis</li>
+      <li>Field service systems setup</li>
+      <li>Job-level profitability tracking</li>
+      <li>Import/export trade lane setup</li>
+      <li>Fractional COO retainer available</li>
+    </ul>
+    <span class="division-card-link">View Services & Pricing</span>
+  </a>
+
+  <!-- AI -->
+  <a href="services.html#ai" class="division-card">
+    <div class="division-card-num">03</div>
+    <div class="division-card-tag">AI Division</div>
+    <h2>AI <em>Workflow</em> Services</h2>
+    <p class="division-card-desc">Practical AI implementation for businesses that want to move faster without adding headcount. No buzzwords — just systems that save you time and money, built around how you actually operate.</p>
+    <ul class="division-card-bullets">
+      <li>AI readiness assessment</li>
+      <li>Custom workflow automation builds</li>
+      <li>Prompt library for your team</li>
+      <li>Full AI transformation packages</li>
+      <li>Ongoing maintenance retainer</li>
+    </ul>
+    <span class="division-card-link">View Services & Pricing</span>
+  </a>
+
+</div>
+
+<!-- ABOUT STRIP -->
+<section class="about-strip" id="about">
+  <div>
+    <div class="about-label">About Akins Companies</div>
+    <h3>Run by an <em>Operator,</em><br>Not a Consultant.</h3>
+    <p>Akins Companies was built by Brendon Akins — an entrepreneur and operations professional based in Kansas City. Every service offered here comes from direct, firsthand experience running real business operations: managing teams, building systems from scratch, structuring international trade lanes, and integrating technology that actually gets used.</p>
+    <p>This isn't a consulting firm that studied your industry. It's an operator who's lived it — with active supplier relationships across the US, South Africa, Namibia, Vietnam, China, Thailand, the Philippines, and Dubai.</p>
+  </div>
+  <div class="about-stats">
+    <div class="about-stat">
+      <div class="about-stat-num">3</div>
+      <div class="about-stat-label">Active business divisions</div>
+    </div>
+    <div class="about-stat">
+      <div class="about-stat-num">Global</div>
+      <div class="about-stat-label">Sourcing reach across 4 continents</div>
+    </div>
+    <div class="about-stat">
+      <div class="about-stat-num">7+</div>
+      <div class="about-stat-label">Countries with active supplier relationships</div>
+    </div>
+    <div class="about-stat">
+      <div class="about-stat-num">48h</div>
+      <div class="about-stat-label">Response time on all inquiries</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT STRIP -->
+<section class="contact-strip">
+  <div class="contact-strip-left">
+    <h3>Ready to <em>Talk?</em></h3>
+    <p>No forms, no calls required to get started. Send an email describing what you're working on and we'll respond within 48 hours with a clear assessment and next step.</p>
+  </div>
+  <div class="contact-strip-right">
+    <div class="contact-item">
+      <span class="contact-item-label">Email</span>
+      <a href="mailto:Brendon@akinsintl.com" style="color:var(--gold-light);text-decoration:none;">Brendon@akinsintl.com</a>
+    </div>
+    <div class="contact-item">
+      <span class="contact-item-label">Location</span>
+      <span>Kansas City, Missouri</span>
+    </div>
+    <p style="font-size:11px; color:var(--text-muted); max-width:300px; line-height:1.7; font-style:italic; margin-top:4px;">Due to the volume of inquiries we receive, we ask that all first contact be made via email. We respond to every inquiry within 48 hours.</p>
+    <a href="mailto:Brendon@akinsintl.com" class="contact-btn">Send an Email</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Akins <span>Companies</span> LLC</div>
+  <ul class="footer-links">
+    <li><a href="charcoal.html">Charcoal</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="mailto:Brendon@akinsintl.com">Contact</a></li>
+  </ul>
+  <div class="footer-note">Kansas City, MO &nbsp;·&nbsp; akinsintl.com</div>
+</footer>
